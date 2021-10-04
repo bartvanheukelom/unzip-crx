@@ -1,6 +1,6 @@
 {
   "name": "unzip-crx",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Unzip chrome extension files",
   "main": "./dist/index.js",
   "scripts": {
@@ -35,14 +35,14 @@
     "eslint-config-peerigon": "^6.0.0",
     "eslint-plugin-jsdoc": "^2.3.1",
     "mocha": "^3.0.1",
-    "mock-fs": "^3.11.0",
+    "mock-fs": "^5.1.1",
     "nyc": "^7.1.0",
     "temp": "^0.8.3",
     "unexpected": "^10.15.0"
   },
   "dependencies": {
     "jszip": "^3.1.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.4",
     "yaku": "^0.16.6"
   }
 }

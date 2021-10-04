@@ -8,7 +8,6 @@ const promisify = require("yaku/lib/promisify");
 
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
-const mkdir = promisify(mkdirp);
 
 // Credits for the original function go to Rob--W
 // https://github.com/Rob--W/crxviewer/blob/master/src/lib/crx-to-zip.js
@@ -78,7 +77,7 @@ function unzip(crxFilePath, destination) {
                 const directory = isFile && path.dirname(fullPath) || fullPath;
                 const content = zip.files[filename].async("nodebuffer");
 
-                return mkdir(directory)
+                return mkdirp(directory)
                     .then(() => isFile ? content : false)
                     .then((data) => data ? writeFile(fullPath, data) : true);
             }));
